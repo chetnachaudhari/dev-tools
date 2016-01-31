@@ -1,0 +1,70 @@
+[user]
+	name = ChetnaChaudhari
+	email = chetnachaudhari@gmail.com
+[creadential]
+	helper = osxkeychain
+[alias]
+  co = checkout
+  ci = commit 
+  st = status
+  br = branch
+  sb = show-branch
+  df = diff --ignore-space-change
+  aa = add -A
+  ll = log --decorate --graph --abbrev-commit # --oneline
+  lg = log --graph --pretty=format:'%Cred%h%Creset - %ad -%C(red)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=short
+  abort = reset --hard HEAD
+  undo = reset HEAD~1
+  recommit = commit --amend
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = auto
+
+[color "branch"]
+  current = blue reverse
+  local = blue
+  remote = green
+
+[color "diff"]
+  meta = blue bold
+  frag = magenta bold
+  old = red
+  new = cyan
+
+[color "status"]
+  added = blue
+  changed = green
+  untracked = cyan
+
+[core]
+	excludesfile = /Users/chetna.chaudhari/.gitignore
+  whitespace = -trailing-space
+
+[apply]
+  whitespace = nowarn
+
+[format]
+#  pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+
+[github]
+    user = ChetnaChaudhari
+
+[log]
+  date = local
+  decorate = short
+  abbrevCommit
+[branch]
+	autosetuprebase = always
+[include]
+  path = ~/.gitconfig.local
+[push]
+	default = current
+    default = current
+[pull]
+    rebase = true
+[merge]
+    tool = vimdiff
+    ff = false
