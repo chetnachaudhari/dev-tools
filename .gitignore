@@ -66,3 +66,6 @@ atlassian-ide-plugin.xml
 .nbattrs
 
 gen-java
+Gemfile.lock
+.bundle/
+vendor/bundle/

@@ -1,7 +1,8 @@
 export CLICOLOR=true
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_72.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
 source ~/.git-prompt.sh
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+source ~/.git-stats.sh
+export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 GIT_PS1_SHOWUPSTREAM="auto"
 source ~/.git-completion.sh
@@ -55,8 +56,7 @@ precmd()
 export EDITOR=vim
 export HISTCONTROL=ignoredups
 shopt -s histappend
-# Set HIVE_HOME
-export HIVE_HOME="/usr/lib/hive/apache-hive-1.2.1-bin"
-PATH=$PATH:$HIVE_HOME/bin
 export PATH
-source ~/dev-tools/.bash_history_settings
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -27,7 +27,7 @@ alias g...="cd ../../.."
 alias pr="ps -A | grep $1"
 alias cfg="mvn compile exec:java"
 alias start="apachectl start"
-alias history="history | tee /Users/chetna.chaudhari/history/history-`date '+%d-%m-%Y-%H:%M:%S'`.txt"
+alias history="history | tee /Users/chetnachaudhari/history/history-`date '+%d-%m-%Y-%H:%M:%S'`.txt"
 alias mci="mvn clean install"
 alias cfg="mvn compile exec:java"
 alias inodes_count="find .  -type f | cut -d "/" -f 2 | sort | uniq -c | sort -n"
@@ -36,8 +36,15 @@ alias time2date='perl -e '\''print scalar(localtime shift), "\n"'\'''
 alias jvmBasics="java -XX:+PrintFlagsFinal -version | grep -iE 'heapsize|permsize|threadstacksize'"
 alias bytes2hr="awk '{ split( \"KB MB GB TB PB\" , v ); s=1; while( $1>1024 ){ $1/=1024; s++ } print int($1) v[s] }'"
 alias sandbox="ssh root@localhost -p 2222"
-alias add2Wheezy="ssh git.corp.flipkart.com '/usr/local/bin/fk-git-add-wzy-remote $1 $2'"
-alias createRepo="ssh git.corp.flipkart.com 'fk-git-create-repo $1'"
 alias ms="mvn sonar:sonar"
-alias irm="java -jar irm-api/target/fdp-irm-api-0.1-SNAPSHOT.jar server irm-api/src/main/resources/config.yml"
+alias cdfcli="cd ~/git/fulcrum/fulcrum-cli"
 alias compile_hive="mvn clean install -Phadoop-2,dist -DskipTests"
+alias getMyIp="ipconfig getifaddr en0"
+alias ll="ls -lGh"
+## Show hidden files ##
+alias l.='ls -d .* --color=auto'
+alias diff='vimdiff'
+alias nowdate='date +"%d-%m-%Y"'
+alias df='df -H'
+alias du='du -ch'
+alias fhere="find . -name "
