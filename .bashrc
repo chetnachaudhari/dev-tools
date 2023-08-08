@@ -1,14 +1,18 @@
 export CLICOLOR=true
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
 source ~/.git-prompt.sh
-source ~/.git-stats.sh
-export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
-GIT_PS1_SHOWUPSTREAM="auto"
-source ~/.git-completion.sh
-if [ -f ~/.bash_aliases ]; then
-        . ~/.bash_aliases
+#source ~/.git-stats.sh
+
+# Source the git bash completion file
+if [ -f ~/.git-completion.bash ]; then
+    source ~/.git-completion.bash
+    GIT_PS1_SHOWDIRTYSTATE=true
+    GIT_PS1_SHOWSTASHSTATE=true
+    GIT_PS1_SHOWUPSTREAM="auto"
+    PS1='\t:\[\033[32m\]$(__git_ps1 " (%s)")\[\033[00m\] \W$ '
 fi
+
+export PS1
 
 ENVLOC=$HOME/.bashvars
 function grabvars {
